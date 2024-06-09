@@ -20,13 +20,19 @@ export interface BaseMovieProps {
 export interface BaseMovieListProps { 
     movies: BaseMovie[];
 }
+
 export interface MovieDetailsProps extends BaseMovieProps {
     genres: {
       id: number;
       name: string;
     }[];
-  }
-  export interface MovieImage {
+    production_countries: {
+      iso_3166_1: string;
+      name: string;
+    }[];
+};
+
+export interface MovieImage {
     file_path: string;
     aspect_ratio?: number; //some props are optional...
     height?: number;
@@ -34,9 +40,9 @@ export interface MovieDetailsProps extends BaseMovieProps {
     vote_average?: number;
     vote_count?: number;
     width?: number;
-  }
+};
   
-  export interface MoviePageProps {
+export interface MoviePageProps {
     movie: MovieDetailsProps;
     images: MovieImage[];
-  }
+};
