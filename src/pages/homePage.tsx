@@ -9,14 +9,14 @@ import MovieFilterUI, {
 import { DiscoverMovies } from "../types/interfaces";
 import { useQuery } from "react-query";
 import Spinner from "../components/spinner";
-import AddToFavouritesIcon from '../components/cardIcons/addToFavourites'
-
+import AddToFavouritesIcon from '../components/cardIcons/addToFavourites';
 
 const titleFiltering = {
   name: "title",
   value: "",
   condition: titleFilter,
 };
+
 const genreFiltering = {
   name: "genre",
   value: "0",
@@ -49,7 +49,7 @@ const HomePage: React.FC = () => {
 
   const movies = data ? data.results : [];
   const displayedMovies = filterFunction(movies);
-  
+
   return (
     <>
       <PageTemplate
