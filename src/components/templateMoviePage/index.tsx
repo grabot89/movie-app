@@ -7,7 +7,7 @@ import { getMovieImages } from "../../api/tmdb-api";
 import { MovieImage, MovieDetailsProps } from "../../types/interfaces";
 import { useQuery } from "react-query";
 import Spinner from '../spinner';
-
+import MoviesContextProvider from "./contexts/moviesContext";
 const styles = {
     gridListRoot: {
         display: "flex",
