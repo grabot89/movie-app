@@ -55,6 +55,7 @@ export interface Review {
     content: string
     author: string
 }
+
 export interface GenreData {
   genres: {
     id: string;
